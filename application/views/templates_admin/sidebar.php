@@ -32,14 +32,14 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo base_url('admin/dataPegawai')?>l">Data Pegawai</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/dataPegawai')?>">Data Pegawai</a>
                         <a class="collapse-item" href="<?php echo base_url('adminController/dataJabatan')?>">Data Jabatan</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-money-check-alt"></i>
@@ -52,10 +52,10 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/dataPenggajian')?>">Data Gaji</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="far fa-fw fa-copy"></i>
@@ -68,20 +68,20 @@
                         <a class="collapse-item" href="<?php echo base_url('admin/slipGaji')?>">Slip Gaji</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Ubah Password</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
-            </li>
+            </li> -->
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
