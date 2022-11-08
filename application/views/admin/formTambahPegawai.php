@@ -26,17 +26,22 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>ID Jabatan</label>
-                    <input type="text" name="idJabatan" class="form-control">
+                    <input type="text" name="id_jabatan" class="form-control">
+                </div> -->
+
+                <div class="form-group">
+                    <label>ID Kehadiran</label>
+                    <input type="text" name="id_kehadiran" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label>Jabatan</label>
-                    <select name="jabatan" class="form-control">
+                    <select name="id_jabatan" class="form-control">
                         <option value="">--Pilih Jabatan--</option>
                         <?php foreach ($jabatan as $j) : ?>
-                            <option value="<?php echo $j->nama_jabatan ?>"><?php echo $j->nama_jabatan ?></option>
+                            <option value="<?php echo $j->id_jabatan ?>"><?php echo $j->nama_jabatan ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -53,11 +58,6 @@
                         <option value="pegawai_tetap">Pegawai Tetap</option>
                         <option value="pegawai_tidak_tetap">Pegawai Tidak Tetap</option>
                     </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Photo</label>
-                    <input type="file" name="photo" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Save</button>

@@ -4,9 +4,11 @@ class DashboardAdmin extends CI_Controller
 {
     public function index()
     {
+        $this->db->join('data_jabatan', 'data_jabatan.id_jabatan = data_pegawai.id_jabatan');
+
         $data['title'] = "Dashboard";
         $pegawai = $this->db->query("SELECT * FROM data_pegawai");
-        $admin = $this->db->query("SELECT * FROM data_pegawai WHERE  jabatan = 'Admin'");
+        $admin = $this->db->query("SELECT * FROM data_jabatan WHERE nama_jabatan = 'Admin'");
         $jabatan = $this->db->query("SELECT * FROM data_jabatan");
         $kehadiran = $this->db->query("SELECT * FROM data_kehadiran");
         $data['pegawai'] = $pegawai->num_rows();

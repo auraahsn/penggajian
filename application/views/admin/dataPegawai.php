@@ -16,7 +16,6 @@
             <th class="text-center">Jabatan</th>
             <th class="text-center">Tanggal Masuk</th>
             <th class="text-center">Status</th>
-            <th class="text-center">Photo</th>
             <th class="text-center">Action</th>
         </tr>
 
@@ -27,17 +26,14 @@
                 <td><?php echo $p->nik ?></td>
                 <td><?php echo $p->nama_pegawai ?></td>
                 <td><?php echo $p->jenis_kelamin ?></td>
-                <td><?php echo $p->idJabatan ?></td>
+                <td><?php echo $p->nama_jabatan ?></td>
                 <td><?php echo $p->tanggal_masuk ?></td>
                 <td><?php echo $p->status ?></td>
-                <td>
-                    <img src="<?php echo base_url() . 'assets/photo/' . $p->photo ?>" width="75px" alt="foto">
-                </td>
                 
                 <td>
                     <center>
-                        <a class="btn btn-sm btn-warning" href=""><i class="fas fa-edit"></i></a>
-                        <a onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-sm btn-danger" href=""><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-sm btn-warning" href="<?php echo base_url('adminController/DataPegawai/updateData/'.$p->id_pegawai) ?>"><i class="fas fa-edit"></i></a>
+                        <a onclick="return confirm('Apakah Anda yakin akan menghapus data ini?')" class="btn btn-sm btn-danger" href="<?php echo base_url('adminController/dataPegawai/deleteData/'. $p->id_pegawai) ?>"><i class="fas fa-trash"></i></a>
                     </center>
                 </td>
             </tr>
