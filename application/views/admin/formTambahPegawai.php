@@ -21,8 +21,8 @@
                     <label>Jenis Kelamin</label>
                     <select name="jenis_kelamin" class="form-control">
                         <option value="">--Pilih Jenis Kelamin--</option>
-                        <option value="laki-laki">Laki-laki</option>
-                        <option value="perempuan">Perempuan</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
                 </div>
 
@@ -31,10 +31,15 @@
                     <input type="text" name="id_jabatan" class="form-control">
                 </div> -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>ID Kehadiran</label>
-                    <input type="text" name="id_kehadiran" class="form-control">
-                </div>
+                    <select name="id_jabatan" class="form-control">
+                        <option value="">--Pilih ID Kehadiran--</option>
+                        <?php foreach ($pegawai as $p) : ?>
+                            <option value="<?php echo $p->id_kehadiran ?>"><?php echo $p->nama_pegawai ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div> -->
 
                 <div class="form-group">
                     <label>Jabatan</label>
@@ -55,8 +60,8 @@
                     <label>Status</label>
                     <select name="status" class="form-control">
                         <option value="">--Pilih Status--</option>
-                        <option value="pegawai_tetap">Pegawai Tetap</option>
-                        <option value="pegawai_tidak_tetap">Pegawai Tidak Tetap</option>
+                        <option value="Pegawai Tetap">Pegawai Tetap</option>
+                        <option value="Pegawai Tidak Tetap">Pegawai Tidak Tetap</option>
                     </select>
                 </div>
 

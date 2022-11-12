@@ -4,9 +4,9 @@
         <h1 class="h3 mb-0 text-gray-800"><?php echo $title ?></h1>
     </div>
 
-    <div class="card mb-3"> 
+    <div class="card mb-3">
         <div class="card-header bg-primary text-white">
-            Filter Data Absensi Pegawai
+            Input Absensi Pegawai
         </div>
         <div class="card-body">
             <form class="form-inline">
@@ -39,8 +39,7 @@
                         <?php } ?>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Tampilkan Data</button>
-                <a class="btn btn-success mb-2 ml-3" href="<?php echo base_url('adminController/dataAbsensi/inputAbsensi')?>"><i class="fas fa-plus"></i> Input Data Kehadiran</a>
+                <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Generate</button>
             </form>
         </div>
     </div>
@@ -62,42 +61,47 @@
         Tahun: <span class="font-weight-bold"><?php echo $tahun ?></span>
     </div>
 
-    <?php
-    $jml_data = count($absensi);
-    if ($jml_data > 0) { ?>
-        
+    <form method="POST" action="">
+        <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button> 
         <table class="table table-bordered table-striped">
             <tr>
                 <td class="text-center">No.</td>
+                <td class="text-center">Bulan</td> 
                 <td class="text-center">NIK</td>
                 <td class="text-center">Nama</td>
                 <td class="text-center">Jenis Kelamin</td>
                 <td class="text-center">Jabatan</td>
-                <td class="text-center">Hadir</td>
-                <td class="text-center">Sakit</td>
-                <td class="text-center">Alfa</td>
-                <td class="text-center">ID Kehadiran</td>
+                <td class="text-center" width="8%">Hadir</td>
+                <td class="text-center" width="8%">Sakit</td>
+                <td class="text-center" width="8%">Alfa</td>
+                <td class="text-center">ID Pegawai</td> 
             </tr>
 
             <?php $no = 1;
-            foreach ($absensi as $a) : ?>
+            foreach ($inputAbsensi as $a) : ?>
                 <tr>
+                    <input type="hidden" name="bulan[]" class="form-control" value="<?php echo $bulanTahun ?>">
+                    <input type="hidden" name="nik[]" class="form-control" value="<?php echo $a->nik ?>"> 
+                    <input type="hidden" name="nama_pegawai[]" class="form-control" value="<?php echo $a->nama_pegawai ?>"> 
+                    <input type="hidden" name="jenis_kelamin[]" class="form-control" value="<?php echo $a->jenis_kelamin ?>"> 
+                    <input type="hidden" name="nama_jabatan[]" class="form-control" value="<?php echo $a->nama_jabatan ?>"> 
+                    <input type="hidden" name="id_pegawai[]" class="form-control" value="<?php echo $a->id_pegawai ?>"> 
+
                     <td><?php echo $no++ ?></td>
+                    <td><?php echo $bulanTahun ?></td>
                     <td><?php echo $a->nik ?></td>
                     <td><?php echo $a->nama_pegawai ?></td>
                     <td><?php echo $a->jenis_kelamin ?></td>
                     <td><?php echo $a->nama_jabatan ?></td>
-                    <td><?php echo $a->hadir ?></td>
-                    <td><?php echo $a->sakit ?></td>
-                    <td><?php echo $a->alfa ?></td>
+                    <td><input type="number" name="hadir[]" class="form-control" value="0" min="1"></td>
+                    <td><input type="number" name="sakit[]" class="form-control" value="0" min="1"></td>
+                    <td><input type="number" name="alfa[]" class="form-control" value="0" min="1"></td>
                     <td><?php echo $a->id_pegawai ?></td>
                 </tr>
             <?php endforeach; ?>
 
-        </table>
+        </table> <br><br><br><br>
+    </form>
 
-    <?php } else { ?>
-        <span class="badge badge-danger"><i class="fas fa-info-circle">  Data masih kosong! </i></span>
-    <?php } ?>
 
 </div>

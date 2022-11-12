@@ -17,6 +17,10 @@ class DataPegawai extends CI_Controller
     public function addData()
     {
         $data['title'] = "Tambah Data Pegawai";
+
+        //$this->db->join('data_pegawai', 'data_pegawai.id_jabatan = data_jabatan.id_jabatan');
+        $data['pegawai'] = $this->PenggajianModel->getData('data_pegawai')->result();
+
         $data['jabatan'] = $this->PenggajianModel->getData('data_jabatan')->result();
         $this->load->view('templates_admin/header', $data);
         $this->load->view('templates_admin/sidebar');
@@ -30,8 +34,8 @@ class DataPegawai extends CI_Controller
         $jenis_kelamin    = $this->input->post('jenis_kelamin');
         $tanggal_masuk    = $this->input->post('tanggal_masuk');
         //$jabatan    = $this->input->post('jabatan');
-        $id_jabatan      = $this->input->post('id_jabatan');
-        $id_kehadiran      = $this->input->post('id_kehadiran');
+        $id_jabatan      = $this->input->post('id_jabatan'); 
+        // $id_kehadiran      = $this->input->post('id_kehadiran');
         $status    = $this->input->post('status');
 
         $data = array(
@@ -40,7 +44,7 @@ class DataPegawai extends CI_Controller
             'jenis_kelamin' => $jenis_kelamin,
             //'jabatan'       => $jabatan,
             'id_jabatan'    => $id_jabatan,
-            'id_kehadiran'  => $id_kehadiran,
+            // 'id_kehadiran'  => $id_kehadiran,
             'tanggal_masuk' => $tanggal_masuk,
             'status'        => $status,
         );
@@ -72,7 +76,7 @@ class DataPegawai extends CI_Controller
         $tanggal_masuk    = $this->input->post('tanggal_masuk');
         //$jabatan    = $this->input->post('jabatan');
         $id_jabatan      = $this->input->post('id_jabatan');
-        $id_kehadiran      = $this->input->post('id_kehadiran');
+        // $id_kehadiran      = $this->input->post('id_kehadiran');
         $status    = $this->input->post('status');
 
         $data = array(
@@ -81,7 +85,7 @@ class DataPegawai extends CI_Controller
             'jenis_kelamin' => $jenis_kelamin,
             //'jabatan'       => $jabatan,
             'id_jabatan'    => $id_jabatan,
-            'id_kehadiran'  => $id_kehadiran,
+            // 'id_kehadiran'  => $id_kehadiran,
             'tanggal_masuk' => $tanggal_masuk,
             'status'        => $status,
         );

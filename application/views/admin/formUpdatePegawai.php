@@ -23,8 +23,8 @@
                         <label>Jenis Kelamin</label>
                         <select name="jenis_kelamin" class="form-control">
                             <option value="<?php echo $p->jenis_kelamin ?>"><?php echo $p->jenis_kelamin ?></option>
-                            <option value="laki-laki">Laki-laki</option>
-                            <option value="perempuan">Perempuan</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
 
@@ -33,10 +33,10 @@
                     <input type="text" name="id_jabatan" class="form-control">
                 </div> -->
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label>ID Kehadiran</label>
                         <input type="text" name="id_kehadiran" class="form-control" value="<?php echo $p->id_kehadiran ?>">
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label>Jabatan</label>
@@ -55,9 +55,9 @@
                     <div class="form-group">
                         <label>Status</label>
                         <select name="status" class="form-control">
-                            <option value="<?php echo $p->tanggal_masuk ?>"><?php echo $p->status ?></option>
-                            <option value="pegawai_tetap">Pegawai Tetap</option>
-                            <option value="pegawai_tidak_tetap">Pegawai Tidak Tetap</option>
+                            <option value="<?php echo $p->status ?>"><?php echo $p->status ?></option>
+                            <option value="Pegawai Tetap">Pegawai Tetap</option>
+                            <option value="Pegawai Tidak Tetap">Pegawai Tidak Tetap</option>
                         </select>
                     </div>
 
