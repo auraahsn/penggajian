@@ -4,9 +4,9 @@
         <h1 class="h3 mb-0 text-gray-800"><?php echo $title ?></h1>
     </div>
 
-    <div class="card mb-3"> 
+    <div class="card mb-3">
         <div class="card-header bg-primary text-white">
-            Filter Data Absensi Pegawai
+            Filter Data Gaji Pegawai
         </div>
         <div class="card-body">
             <form class="form-inline">
@@ -40,7 +40,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Tampilkan Data</button>
-                <a class="btn btn-success mb-2 ml-3" href="<?php echo base_url('adminController/dataAbsensi/inputAbsensi')?>"><i class="fas fa-plus"></i> Input Data Kehadiran</a>
+                <a class="btn btn-success mb-2 ml-3" href=""><i class="fas fa-plus"></i>Cetak Daftar Gaji</a>
             </form>
         </div>
     </div>
@@ -58,46 +58,49 @@
     ?>
 
     <div class="alert alert-info">
-        Menampilkan Data Kehadiran Pegawai Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span>
+        Menampilkan Data Gaji Pegawai Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span>
         Tahun: <span class="font-weight-bold"><?php echo $tahun ?></span>
     </div>
 
     <?php
-    $jml_data = count($absensi);
+    $jml_data = count($gaji);
     if ($jml_data > 0) { ?>
-        
+    <div class="table-responsive">
         <table class="table table-bordered table-striped">
             <tr>
-                <td class="text-center">No.</td>
-                <td class="text-center">NIK</td>
-                <td class="text-center">Nama</td>
-                <td class="text-center">Jenis Kelamin</td>
-                <td class="text-center">Jabatan</td>
-                <td class="text-center">Hadir</td>
-                <td class="text-center">Sakit</td>
-                <td class="text-center">Alfa</td>
-                <td class="text-center">ID Kehadiran</td>
+                <th class="text-center">No</th>
+                <th class="text-center">NIK</th>
+                <th class="text-center">Nama Pegawai</th>
+                <th class="text-center">Jenis Kelamin</th>
+                <th class="text-center">Jabatan</th>
+                <th class="text-center">Gaji Pokok</th>
+                <th class="text-center">Tunjangan Transportasi</th>
+                <th class="text-center">Uang Makan</th>
+                <th class="text-center">Total Gaji</th>
             </tr>
 
             <?php $no = 1;
-            foreach ($absensi as $a) : ?>
+            foreach ($gaji as $g) : ?>
+
                 <tr>
                     <td><?php echo $no++ ?></td>
-                    <td><?php echo $a->nik ?></td>
-                    <td><?php echo $a->nama_pegawai ?></td>
-                    <td><?php echo $a->jenis_kelamin ?></td>
-                    <td><?php echo $a->nama_jabatan ?></td>
-                    <td><?php echo $a->hadir ?></td>
-                    <td><?php echo $a->sakit ?></td>
-                    <td><?php echo $a->alfa ?></td>
-                    <td><?php echo $a->id_pegawai ?></td>
+                    <td><?php echo $g->nik ?></td>
+                    <td><?php echo $g->nama_pegawai ?></td>
+                    <td><?php echo $g->jenis_kelamin ?></td>
+                    <td><?php echo $g->nama_jabatan ?></td>
+                    <td>Rp<?php echo number_format($g->gaji_pokok, 0, ',', '.') ?></td>
+                    <td>Rp<?php echo number_format($g->tj_transport, 0, ',', '.') ?></td>
+                    <td>Rp<?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
+                    <td>Rp<?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan, 0, ',', '.') ?></td>
                 </tr>
-            <?php endforeach; ?>
 
+            <?php endforeach; ?>
         </table>
+    </div>
 
     <?php } else { ?>
-        <span class="badge badge-danger"><i class="fas fa-info-circle">  Data absensi masih kosong! </i></span>
+        <span class="badge badge-danger"><i class="fas fa-info-circle">  Data gaji masih kosong! </i></span>
     <?php } ?>
+
 
 </div>

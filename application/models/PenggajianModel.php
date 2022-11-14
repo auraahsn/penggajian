@@ -24,5 +24,9 @@ class PenggajianModel extends CI_Model
             $this->db->insert_batch($table, $data);
         }
     }
+    // public function get_where($data){
+    //     $query = $this->db->get_where('data_kehadiran', ['bulan' => $data]);
+    //     return $query->row();
+    // }
 }
 ?>
