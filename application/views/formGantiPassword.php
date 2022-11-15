@@ -11,13 +11,13 @@
             
                 <div class="form-group">
                     <label>Password Baru</label>
-                    <input type="passord" name="passBaru" class="form-control">
+                    <input type="password" name="passBaru" class="form-control">
                     <?php echo form_error('passBaru', '<div class=""text-small text-danger"></div>')?>
                 </div>
 
                 <div class="form-group">
                     <label> Ulangi Password Baru</label>
-                    <input type="passord" name="ulangPass" class="form-control">
+                    <input type="password" name="ulangPass" class="form-control">
                     <?php echo form_error('ulangPass', '<div class=""text-small text-danger"></div>')?>
                 </div>
 

@@ -40,7 +40,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Tampilkan Data</button>
-                <a class="btn btn-success mb-2 ml-3" href=""><i class="fas fa-plus"></i>Cetak Daftar Gaji</a>
+                <a class="btn btn-success mb-2 ml-3" href=""><i class="fas fa-plus"></i>  Cetak Daftar Gaji</a>
             </form>
         </div>
     </div>
@@ -65,41 +65,48 @@
     <?php
     $jml_data = count($gaji);
     if ($jml_data > 0) { ?>
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-            <tr>
-                <th class="text-center">No</th>
-                <th class="text-center">NIK</th>
-                <th class="text-center">Nama Pegawai</th>
-                <th class="text-center">Jenis Kelamin</th>
-                <th class="text-center">Jabatan</th>
-                <th class="text-center">Gaji Pokok</th>
-                <th class="text-center">Tunjangan Transportasi</th>
-                <th class="text-center">Uang Makan</th>
-                <th class="text-center">Total Gaji</th>
-            </tr>
-
-            <?php $no = 1;
-            foreach ($gaji as $g) : ?>
-
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
                 <tr>
-                    <td><?php echo $no++ ?></td>
-                    <td><?php echo $g->nik ?></td>
-                    <td><?php echo $g->nama_pegawai ?></td>
-                    <td><?php echo $g->jenis_kelamin ?></td>
-                    <td><?php echo $g->nama_jabatan ?></td>
-                    <td>Rp<?php echo number_format($g->gaji_pokok, 0, ',', '.') ?></td>
-                    <td>Rp<?php echo number_format($g->tj_transport, 0, ',', '.') ?></td>
-                    <td>Rp<?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
-                    <td>Rp<?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan, 0, ',', '.') ?></td>
+                    <th class="text-center">No</th>
+                    <th class="text-center">NIK</th>
+                    <th class="text-center">Nama Pegawai</th>
+                    <th class="text-center">Jenis Kelamin</th>
+                    <th class="text-center">Jabatan</th>
+                    <th class="text-center">Gaji Pokok</th>
+                    <th class="text-center">Tunjangan Transportasi</th>
+                    <th class="text-center">Uang Makan</th>
+                    <th class="text-center">Potongan Gaji</th>
+                    <th class="text-center">Total Gaji</th>
                 </tr>
 
-            <?php endforeach; ?>
-        </table>
-    </div>
+                <?php foreach ($potongan as $p) {
+                    $alfa = $p->jml_potongan;
+                } ?>
+
+
+                <?php $no = 1;
+                foreach ($gaji as $g) : ?>
+                    <?php $potongan = $g->alfa * $alfa ?>
+                    <tr>
+                        <td><?php echo $no++ ?></td>
+                        <td><?php echo $g->nik ?></td>
+                        <td><?php echo $g->nama_pegawai ?></td>
+                        <td><?php echo $g->jenis_kelamin ?></td>
+                        <td><?php echo $g->nama_jabatan ?></td>
+                        <td>Rp<?php echo number_format($g->gaji_pokok, 0, ',', '.') ?></td>
+                        <td>Rp<?php echo number_format($g->tj_transport, 0, ',', '.') ?></td>
+                        <td>Rp<?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
+                        <td>Rp<?php echo number_format($potongan, 0, ',', '.') ?></td>
+                        <td>Rp<?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $potongan, 0, ',', '.') ?></td>
+                    </tr>
+
+                <?php endforeach; ?>
+            </table>
+        </div>
 
     <?php } else { ?>
-        <span class="badge badge-danger"><i class="fas fa-info-circle">  Data gaji masih kosong! </i></span>
+        <span class="badge badge-danger"><i class="fas fa-info-circle"> Data gaji masih kosong! </i></span>
     <?php } ?>
 
 

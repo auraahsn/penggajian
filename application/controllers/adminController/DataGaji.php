@@ -35,8 +35,10 @@ class DataGaji extends CI_Controller
         // WHERE data_kehadiran.bulan = '$bulanTahun'
         // ORDER BY data_pegawai.nama_pegawai ASC")->result();
 
+        $data['potongan'] = $this->PenggajianModel->getData('pot_gaji')->result();
+
         $data['gaji'] = $this->db->query("SELECT data_pegawai.*, 
-        data_jabatan.* 
+        data_jabatan.*, data_kehadiran.alfa
         FROM data_pegawai
         INNER JOIN data_kehadiran ON data_kehadiran.nik=data_pegawai.nik
         INNER JOIN data_jabatan ON data_jabatan.id_jabatan=data_pegawai.id_jabatan

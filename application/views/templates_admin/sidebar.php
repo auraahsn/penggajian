@@ -50,6 +50,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?php echo base_url('adminController/dataAbsensi')?>">Data Absensi</a>
                         <a class="collapse-item" href="<?php echo base_url('adminController/dataGaji')?>">Data Gaji</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/potGaji')?>">Potongan Gaji</a>
                     </div>
                 </div>
             </li>
