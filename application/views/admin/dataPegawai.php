@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin: bottom 100px">
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?php echo $title ?></h1>
@@ -16,6 +16,7 @@
             <th class="text-center">Jabatan</th>
             <th class="text-center">Tanggal Masuk</th>
             <th class="text-center">Status</th>
+            <th class="text-center">Hak Akses</th>
             <th class="text-center">Action</th>
         </tr>
 
@@ -29,6 +30,11 @@
                 <td><?php echo $p->nama_jabatan ?></td>
                 <td><?php echo $p->tanggal_masuk ?></td>
                 <td><?php echo $p->status ?></td>
+                    <?php if($p->hak_akses=='1') { ?>
+                        <td>Admin</td>
+                        <?php } else{ ?>
+                            <td>Pegawai</td>
+                        <?php } ?>
                 
                 <td>
                     <center>

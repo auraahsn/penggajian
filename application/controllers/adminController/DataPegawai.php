@@ -37,6 +37,9 @@ class DataPegawai extends CI_Controller
         $id_jabatan      = $this->input->post('id_jabatan'); 
         // $id_kehadiran      = $this->input->post('id_kehadiran');
         $status    = $this->input->post('status');
+        $hak_akses    = $this->input->post('hak_akses');
+        $username    = $this->input->post('username');
+        $password    = md5 ($this->input->post('password'));
 
         $data = array(
             'nik'           => $nik,
@@ -47,6 +50,9 @@ class DataPegawai extends CI_Controller
             // 'id_kehadiran'  => $id_kehadiran,
             'tanggal_masuk' => $tanggal_masuk,
             'status'        => $status,
+            'hak_akses'     => $hak_akses,
+            'username'     => $username,
+            'password'     => $password,
         );
 
         $this->PenggajianModel->insertData($data, 'data_pegawai');
@@ -66,6 +72,7 @@ class DataPegawai extends CI_Controller
         $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/formUpdatePegawai', $data);
         $this->load->view('templates_admin/footer');
+        
     }
     public function updateDataAction()
     {
@@ -78,6 +85,9 @@ class DataPegawai extends CI_Controller
         $id_jabatan      = $this->input->post('id_jabatan');
         // $id_kehadiran      = $this->input->post('id_kehadiran');
         $status    = $this->input->post('status');
+        $hak_akses    = $this->input->post('hak_akses');
+        $username    = $this->input->post('username');
+        $password    = md5 ($this->input->post('password'));
 
         $data = array(
             'nik'           => $nik,
@@ -88,6 +98,9 @@ class DataPegawai extends CI_Controller
             // 'id_kehadiran'  => $id_kehadiran,
             'tanggal_masuk' => $tanggal_masuk,
             'status'        => $status,
+            'hak_akses'        => $hak_akses,
+            'username'     => $username,
+            'password'     => $password,
         );
 
         $where = array(

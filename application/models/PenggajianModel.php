@@ -1,5 +1,7 @@
 <?php
 
+use LDAP\Result;
+
 class PenggajianModel extends CI_Model
 {
     public function getData($table)
@@ -22,6 +24,22 @@ class PenggajianModel extends CI_Model
         $jumlah = count($data);
         if($jumlah > 0){
             $this->db->insert_batch($table, $data);
+        }
+    }
+    public function cek_login()
+    {
+        $username       = set_value('username');
+        $password       = set_value('password');
+
+        $result         = $this->db->where('username',$username)
+                                    -> where('password',md5($password))
+                                    ->limit(1)
+                                    ->get('data_pegawai');
+
+        if($result->num_rows()>0){
+            return $result->row();
+        }else{
+            return FALSE;
         }
     }
     // public function get_where($data){

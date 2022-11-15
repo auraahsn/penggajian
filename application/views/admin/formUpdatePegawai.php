@@ -20,6 +20,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="username" class="form-control" value="<?php echo $p->username ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" value="<?php echo $p->password ?>">
+                    </div>
+
+                    <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select name="jenis_kelamin" class="form-control">
                             <option value="<?php echo $p->jenis_kelamin ?>"><?php echo $p->jenis_kelamin ?></option>
@@ -58,6 +68,21 @@
                             <option value="<?php echo $p->status ?>"><?php echo $p->status ?></option>
                             <option value="Pegawai Tetap">Pegawai Tetap</option>
                             <option value="Pegawai Tidak Tetap">Pegawai Tidak Tetap</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hak Akses</label>
+                        <select name="hak_akses" class="form-control">
+                            <option value="<?php echo $p->hak_akses ?>">
+                            <?php if($p->hak_akses=='1'){
+                                echo "Admin";
+                            }else{
+                                echo "Pegawai";
+                            } ?>
+                            </option>
+                            <option value="1">Admin</option>
+                            <option value="2">Pegawai</option>
                         </select>
                     </div>
 

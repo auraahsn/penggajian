@@ -70,18 +70,18 @@
                 </div>
             </li> -->
 
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('gantiPassword')?>">
                     <i class="fas fa-fw fa-lock"></i>
-                    <span>Ubah Password</span></a>
-            </li> -->
+                    <span>Ganti Password</span></a>
+            </li>
 
             <!-- Nav Item - Tables -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('welcome/logout')?>">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
-            </li> -->
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -116,7 +116,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang Lisa</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('nama_pegawai')?> </span>
                                 <img class="img-profile rounded-circle" src="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg">
                             </a>
                         </li>
