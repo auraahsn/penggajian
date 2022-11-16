@@ -25,7 +25,7 @@
 
             <li class="nav-item">
                 <!-- <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg"> -->
-                <a class="nav-link" href="<?php echo base_url('pegawaiController/dataGaji')?>">
+                <a class="nav-link" href="<?php echo base_url('pegawaiController/GajiPegawai')?>">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Data Gaji</span></a>
             </li>
@@ -78,11 +78,11 @@
                 </div>
             </li> -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('gantiPassword')?>">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Ganti Password</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">

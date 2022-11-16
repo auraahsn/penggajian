@@ -16,9 +16,14 @@
             <th>Cetak Slip</th>
         </tr>
 
+        <?php foreach($gaji as $g) :  ?>
+            <tr>
+                <td><?php echo $g->bulan ?></td>
+            </tr>
         <tr>
             <td></td>
         </tr>
+        <?php endforeach; ?>
     </table>
 
 

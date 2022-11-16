@@ -28,6 +28,7 @@ class Welcome extends CI_Controller {
 				$this->session->set_userdata('hak_akses', $cek -> hak_akses);
 				$this->session->set_userdata('nama_pegawai', $cek -> nama_pegawai);
 				$this->session->set_userdata('id_pegawai', $cek -> id_pegawai);
+				$this->session->set_userdata('nik', $cek -> nik);
 
 				switch ($cek->hak_akses) {
 					case 1 : redirect('adminController/DashboardAdmin');
