@@ -1,6 +1,6 @@
 <?php
 
-class DashboardPegawai extends CI_Controller
+class GajiPegawai extends CI_Controller
 {
 
     // agar mengaksesnya tidak menggunaakan url
@@ -19,14 +19,23 @@ class DashboardPegawai extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "DashboardPegawai";
+        $data['title'] = "Data Gaji";
         $id=$this->session->userdata('id_pegawai');
-        $data['pegawai'] = $this->db->query("SELECT*FROM data_pegawai WHERE id_pegawai='$id'")->result();
+        $data['pegawai'] = $this->db->query("SELECT data_pegawai.nama_pegawai.nik,
+                        data_jabatan.gaji_pokok,data_jabatan.tj_transport,data_jabatan.uang_makan,
+                        data_kehadiran.alpha,data_kehadiran.bulan,data_kehadiran.id_kehadiran 
+                        FROM data_pegawai
+                        INNER JOIN data_kehadiran ON data_kehadiran.nik=data_pegawai.nik 
+                        INNER JOIN data_jabatan ON data_jabatan.nama_jabatan=data_pegawai.jabatan
+        
+        
+        
+                        ")->result();
         // var_dump($data);
         // die();
         $this->load->view('templates_pegawai/header', $data);
         $this->load->view('templates_pegawai/sidebar');
-        $this->load->view('pegawai/dashboardpegawai', $data);
+        $this->load->view('pegawaiController/dataGaji', $data);
         $this->load->view('templates_pegawai/footer');
     }
 }

@@ -19,7 +19,7 @@ class DashboardAdmin extends CI_Controller
     {
         $this->db->join('data_jabatan', 'data_jabatan.id_jabatan = data_pegawai.id_jabatan');
 
-        $data['title'] = "Dashboard";
+        $data['title'] = "DashboardAdmin";
         $pegawai = $this->db->query("SELECT * FROM data_pegawai");
         $admin = $this->db->query("SELECT * FROM data_jabatan WHERE nama_jabatan = 'Admin'");
         $jabatan = $this->db->query("SELECT * FROM data_jabatan");
