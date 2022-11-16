@@ -16,13 +16,20 @@
             <th>Cetak Slip</th>
         </tr>
 
-        <?php foreach($gaji as $g) :  ?>
+        <?php foreach ($potongan as $p) : ?>
+            <?php $potongan = $p->jml_potongan; ?>
+        <?php endforeach; ?>
+
+        <?php foreach ($gaji as $g) :  ?>
+            <?php $pot_gaji = $g->alfa * $potongan ?>
             <tr>
                 <td><?php echo $g->bulan ?></td>
+                <td><?php echo number_format($g->gaji_pokok, 0, ',', '.') ?></td>
+                <td><?php echo number_format($g->tj_transport, 0, ',', '.') ?></td>
+                <td><?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
+                <td><?php echo number_format($pot_gaji, 0, ',', '.') ?></td>
+                <td><?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $pot_gaji,0,',','.') ?></td>
             </tr>
-        <tr>
-            <td></td>
-        </tr>
         <?php endforeach; ?>
     </table>
 

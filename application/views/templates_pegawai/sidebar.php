@@ -23,12 +23,12 @@
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item">
-                <!-- <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg"> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg">
                 <a class="nav-link" href="<?php echo base_url('pegawaiController/GajiPegawai')?>">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Data Gaji</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">

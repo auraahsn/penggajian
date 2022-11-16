@@ -51,7 +51,7 @@
                 </div>
             </li>
 
-             <li class="nav-item">
+             <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Laporan</span>
@@ -62,7 +62,7 @@
                         <a class="collapse-item" href="<?php echo base_url('adminController/LaporanAbsensi') ?>">Laporan Absensi</a> 
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">
