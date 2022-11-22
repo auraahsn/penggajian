@@ -8,7 +8,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                
+
                 <div class="sidebar-brand-text mx-3">SI GAJI KARYAWAN</div>
             </a>
 
@@ -18,17 +18,19 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <!-- <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg"> -->
-                <a class="nav-link" href="<?php echo base_url('pegawaiController/DashboardPegawai')?>">
+                <a class="nav-link" href="<?php echo base_url('pegawaiController/DashboardPegawai') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Dashboard</span>
+                </a>
             </li>
 
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg">
-                <a class="nav-link" href="<?php echo base_url('pegawaiController/GajiPegawai')?>">
-                    <i class="fas fa-fw fa-money-check-alt"></i>
-                    <span>Data Gaji</span></a>
-            </li> -->
+            <li class="nav-item">
+                <!-- <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg"> -->
+                    <a class="nav-link" href="<?php echo base_url('pegawaiController/GajiPegawai') ?>">
+                        <i class="fas fa-fw fa-money-check-alt"></i>
+                        <span>Data Gaji</span>
+                    </a>
+            </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">
@@ -39,8 +41,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo base_url('adminController/dataPegawai')?>">Data Pegawai</a>
-                        <a class="collapse-item" href="<?php echo base_url('adminController/dataJabatan')?>">Data Jabatan</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/dataPegawai') ?>">Data Pegawai</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/dataJabatan') ?>">Data Jabatan</a>
                     </div>
                 </div>
             </li> -->
@@ -55,9 +57,9 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo base_url('adminController/dataAbsensi')?>">Data Absensi</a>
-                        <a class="collapse-item" href="<?php echo base_url('adminController/dataGaji')?>">Data Gaji</a>
-                        <a class="collapse-item" href="<?php echo base_url('adminController/potGaji')?>">Potongan Gaji</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/dataAbsensi') ?>">Data Absensi</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/dataGaji') ?>">Data Gaji</a>
+                        <a class="collapse-item" href="<?php echo base_url('adminController/potGaji') ?>">Potongan Gaji</a>
                     </div>
                 </div>
             </li> -->
@@ -71,22 +73,22 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?php echo base_url('admin/laporanGaji')?>">Laporan Gaji</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/laporanAbsensi')?>">Laporan Absensi</a>
-                        <a class="collapse-item" href="<?php echo base_url('admin/slipGaji')?>">Slip Gaji</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/laporanGaji') ?>">Laporan Gaji</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/laporanAbsensi') ?>">Laporan Absensi</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/slipGaji') ?>">Slip Gaji</a>
                     </div>
                 </div>
             </li> -->
 
             <!-- <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('gantiPassword')?>">
+                <a class="nav-link" href="<?php echo base_url('gantiPassword') ?>">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Ganti Password</span></a>
             </li> -->
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('welcome/logout')?>">
+                <a class="nav-link" href="<?php echo base_url('welcome/logout') ?>">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Logout</span></a>
             </li>
@@ -122,9 +124,8 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('nama_pegawai')?> </span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('nama_pegawai') ?> </span>
                                 <img class="img-profile rounded-circle" src="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg">
                             </a>
                         </li>

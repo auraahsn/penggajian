@@ -51,7 +51,7 @@
                 </div>
             </li>
 
-             <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Laporan</span>
@@ -59,10 +59,10 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?php echo base_url('adminController/LaporanGaji') ?>">Laporan Gaji</a>
-                        <a class="collapse-item" href="<?php echo base_url('adminController/LaporanAbsensi') ?>">Laporan Absensi</a> 
+                        <a class="collapse-item" href="<?php echo base_url('adminController/LaporanAbsensi') ?>">Laporan Absensi</a>
                     </div>
                 </div>
-            </li> -->
+            </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">
