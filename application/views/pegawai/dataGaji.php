@@ -17,7 +17,7 @@
         </tr>
 
         <?php foreach ($potongan as $p) : ?>
-            <?php $potongan = $p->jml_potongan; ?>
+        <?php $potongan = $p->jml_potongan; ?>
         <?php endforeach; ?>
 
         <?php foreach ($gaji as $g) :  ?>
@@ -29,6 +29,11 @@
                 <td><?php echo number_format($g->uang_makan, 0, ',', '.') ?></td>
                 <td><?php echo number_format($pot_gaji, 0, ',', '.') ?></td>
                 <td><?php echo number_format($g->gaji_pokok + $g->tj_transport + $g->uang_makan - $pot_gaji,0,',','.') ?></td>
+                <td>
+                    <center>
+                        <a class="btn btn-sm btn-primary"href="<?php echo base_url('pegawaiController/GajiPegawai/cetakSlip/'.$g->id_kehadiran)?>"><i class="fas fa-print"></i></a>
+                    </center>
+                </td>
             </tr>
         <?php endforeach; ?>
     </table>

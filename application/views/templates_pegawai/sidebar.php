@@ -80,11 +80,11 @@
                 </div>
             </li> -->
 
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('gantiPassword') ?>">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('pegawaiController/gantipasswordPegawai') ?>">
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Ganti Password</span></a>
-            </li> -->
+            </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
