@@ -5,7 +5,7 @@
     </div>
 
     <?php echo $this->session->flashdata('pesan') ?>
-    <a class="mb-2 mt-2 btn btn-sm btn-success" href="<?php echo base_url('adminController/DataPegawai/addData') ?>"><i class="fas fa-plus">Tambah Pegawai</i></a>
+    <a class="mb-2 mt-2 btn btn-sm btn-success" href="<?php echo base_url('adminController/DataPegawai/addData') ?>"><i class="fas fa-plus">  Tambah Pegawai</i></a>
 
     <table class="table table-stripted table-bordered">
         <tr>

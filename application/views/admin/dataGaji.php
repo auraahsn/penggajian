@@ -53,12 +53,12 @@
                 <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Tampilkan Data</button>
 
                 <?php if (count($gaji) > 0) { ?>
-                    <!-- <a class="btn btn-success mb-2 ml-3" href="<?php echo base_url('AdminController/DataGaji/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>"><i class="fas fa-print"></i> Cetak Daftar Gaji</a> -->
+                    <a class="btn btn-success mb-2 ml-3" href="<?php echo base_url('AdminController/DataGaji/cetakGaji?bulan=' . $bulan), '&tahun=' . $tahun ?>"><i class="fas fa-print"></i> Cetak Daftar Gaji</a>
                 <?php } else { ?>
                     <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-success mb-2 ml-3" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-success mb-2 ml-3" data-toggle="modal" data-target="#exampleModal">
                         <i class="fas fa-print"></i>  Cetak Daftar Gaji
-                    </button> -->
+                    </button>
                 <?php } ?>
 
             </form>

@@ -32,6 +32,14 @@
                     </a>
             </li>
 
+            <li class="nav-item">
+                <!-- <a class="nav-link" href="https://pbs.twimg.com/profile_images/1402599222893891595/7Of6s-MQ_400x400.jpg"> -->
+                    <a class="nav-link" href="<?php echo base_url('pegawaiController/AbsensiPegawai') ?>">
+                        <i class="fas fa-fw fa-money-check-alt"></i>
+                        <span>Absensi</span>
+                    </a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"

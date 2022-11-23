@@ -6,7 +6,7 @@
 
     <?php echo $this->session->flashdata('pesan') ?>
 
-    <a class="btn btn-sm btn-success mb-3 mt-2" href="<?php echo base_url('adminController/potGaji/addData') ?>"><i class="fas fa-plus"></i>  Tambah Data</a>
+    <a class="btn btn-sm btn-success mb-3 mt-2" href="<?php echo base_url('adminController/potGaji/addData') ?>"><i class="fas fa-plus"></i>  Absen</a>
 
     <table class="table table-bordered table-striped">
         <tr>

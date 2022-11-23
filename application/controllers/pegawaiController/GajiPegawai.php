@@ -21,12 +21,14 @@ class GajiPegawai extends CI_Controller
     {
         $data['title'] = "Data Gaji";
         $nik = $this->session->userdata('nik');
+
         $data['potongan'] = $this->PenggajianModel->getData('pot_gaji')->result();
         $data['gaji'] = $this->db->query("SELECT data_pegawai.*, data_jabatan.*,
                         data_kehadiran.*
                         FROM data_pegawai
                         INNER JOIN data_kehadiran ON data_kehadiran.nik=data_pegawai.nik 
                         INNER JOIN data_jabatan ON data_jabatan.id_jabatan=data_pegawai.id_jabatan
+                        WHERE data_kehadiran.nik='$nik'
                         ORDER BY data_kehadiran.bulan DESC")->result();
 
         // var_dump($data);
